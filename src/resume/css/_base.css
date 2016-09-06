@@ -1,0 +1,375 @@
+/* @import _base.css */
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $main_color;
+  background: $main_bg;
+  font-size: 1.6rem;
+  padding: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+
+h4{
+    font-size: 1.8rem;
+}
+
+a {
+  color: $link_text;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      color: $link_hover;
+    }
+    
+    &:focus {
+      text-decoration: none;
+    }
+}
+
+/*
+	This class is one way to drop anchors just before a section,
+	and since I am using a fixed nav bar, it pushes the anchor location
+	up, and hence the page down, so I don't lose the correct placement
+	of my anchor behind the fixed navbar. use:
+	
+	<a class="anchor" id="anchorname"></a>
+*/
+a.anchor {
+    display: block;
+    position: relative;
+    top: -83px;
+    visibility: hidden;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.wrapper {
+  background: $sidebar_bg;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-wrapper {
+    background: $sidebar_bg;
+    position: absolute;
+    right: 0;
+    width: 240px;
+    height: 100%;
+    min-height: 800px;
+    color: $sidebar_text;
+
+    a {
+      color: $sidebar_text;
+        &:hover {
+          text-decoration: underline;
+          color: $link_hover;
+        }
+    
+        &:focus {
+          text-decoration: none;
+        }
+    }
+    .profile-container {
+      padding: 6rem 1rem 1rem 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: $sidebar_text;
+    }
+    .name {
+      font-size: 3.2rem;
+      font-weight: 900;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .profile {
+      margin-bottom: 15px;
+    }
+    
+    .contact-list {
+        .fa {
+          margin-right: 5px;
+          font-size: 1.8rem;
+          vertical-align: middle;
+        }
+    
+        li {
+          margin-bottom: 1.4rem;
+        }
+    
+        li:last-child {
+          margin-bottom: 0;
+        }
+    
+        .email .fa {
+          font-size: 1.4rem;
+        }
+    }
+    
+    .container-block {
+      padding: 2.0rem;
+    }
+    
+    .container-block-title {
+      text-transform: uppercase;
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .degree {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    
+    .education-container {
+        .item {
+          margin-bottom: 1.5rem;
+        }
+        .item:last-child {
+          margin-bottom: 0;
+        }
+        .meta {
+          color: rgba(255, 255, 255, 0.6);
+          font-weight: 500;
+          margin-bottom: 0px;
+          margin-top: 0;
+        }
+        .time {
+          color: rgba(255, 255, 255, 0.6);
+          font-weight: 500;
+          margin-bottom: 0px;
+        }
+    }
+
+    .languages-container {
+        .lang-desc {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+    .languages-list {
+        margin-bottom: 0;
+        li {
+            margin-bottom: 1.0rem;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .interests-list {
+        margin-bottom: 0;
+
+        li {
+            margin-bottom: .6rem;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.main-wrapper {
+  background: $main_wrapper_bg;
+  padding: 60px;
+  padding-right: 300px;
+
+    .section-title {
+          text-transform: uppercase;
+          font-size: 3.0rem;
+          font-weight: 500;
+          color: $section_title;
+          position: relative;
+          margin-top: 0;
+          margin-bottom: 2.0rem;
+
+          .fa {
+              width: 40px;
+              height: 40px;
+              margin-right: 8px;
+              display: inline-block;
+              color: #fff;
+              border-radius: 50%;
+              background-clip: padding-box;
+              background: $section_title;
+              text-align: center;
+              padding-top: 1rem;
+              font-size: 2rem;
+              position: relative;
+              top: -1px;
+          }
+    }
+    .section {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+    .summary {
+        h5{
+            font-size: 2.0rem;
+        }
+        p{
+            margin-bottom: 2rem;
+        }
+    }
+    .employment-section {
+        .item {
+            margin-bottom: 30px;
+        }
+        .upper-row {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2px;
+        }
+        .job-title {
+            color: $exp_text1;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 1px;
+            font-weight: 600;
+        }
+        .time {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: $exp_text2;
+            font-weight:300;
+            font-style: italic;
+        }
+        .company {
+            margin-bottom: 10px;
+            color: $exp_text2;
+        }
+        .project-title {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+    }
+    .projects-section, .education-section, .awards-section, .speaking-section {
+        .intro {
+            margin-bottom: 30px;
+        }
+        .item {
+          margin-bottom: 15px;
+        }
+    }
+}
+
+.skillset {
+
+    .item {
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    .level-title {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    .level-bar {
+      height: 12px;
+      background: $level_bar;
+    }
+    .level-bar-inner {
+      height: 12px;
+      background: $level_bar_inner;
+    }
+}
+
+.footer {
+    padding: 3rem;
+    padding-top: 3rem;
+    
+    .copyright {
+      line-height: 1.6;
+      color: $main_color;
+      font-size: 1.3rem;
+    }
+    
+    .fa-heart {
+      color: $heart_color;
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+   body {
+    padding: 0;
+   }
+  .sidebar-wrapper {
+    position: static;
+    width: inherit;
+
+    .container-block {
+      padding: 1rem;
+      font-size: 2rem;
+    }
+    
+  }
+  .main-wrapper {
+    padding: 1rem;
+
+    .section {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .employment-section{
+        .time {
+            position: static;
+            display: block;
+            margin-top: 5px;
+        }
+        .upper-row {
+            margin-bottom: 0;
+        }
+    }
+  }
+}
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .skillset .level-title {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .skillset .level-bar {
+    display: inline-block;
+    width: 70%;
+    float: left;
+    position: relative;
+    top: 1px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+/* Ex-Large devices (large desktops, 1200px and up) */

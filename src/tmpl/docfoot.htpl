@@ -1,0 +1,20 @@
+<footer class="footer">
+	<div id="contact" class='container'>
+	    <h3>Connect with me.</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/kenlowrie" class="button social"><span class="fa-stack fa-fw"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a></li>
+          <li><a href="https://github.com/kenlowrie" class="button social"><span class="fa-stack fa-fw"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-github fa-stack-1x"></i></span></a></li>
+          <li><a href="https://twitter.com/kenl" class="button social"><span class="fa-stack fa-fw"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a></li>
+          <li><a href="https://vimeo.com/cloudylogic" class="button social"><span class="fa-stack fa-fw"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-vimeo fa-stack-1x"></i></span></a></li>
+        </ul>
+    </div>
+    <div id="footer-bottom">
+    	Coded with <span class="fa fa-heart"></span> by <a href="https://www.kenlowrie.com" target="_blank">Ken Lowrie</a>
+    </div>
+</footer> <!-- footer -->
+
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>

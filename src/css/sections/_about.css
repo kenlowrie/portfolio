@@ -1,0 +1,40 @@
+/* @import sections/_about.css */
+#about {
+
+    color: $color-tx-about;
+    background-color: $color-bg-about;
+
+	em, a {
+		font-size: 120%;
+		vertical-align: -4%;
+	}
+	
+	a {
+		font-style: italic;
+	    color: $color-lk-about; 
+	}
+	
+	li {
+	    list-style: none;
+	    font-size: 100%;
+	}
+
+    p {
+        padding: 10px 15px;
+    }
+
+	@media $small {
+        p {
+            padding: 10px 20px;
+        }
+
+        li {
+            font-size: 80%;
+        }
+
+        em, a {
+            font-size: 130%;
+            vertical-align: -6%;
+        }
+    }
+}

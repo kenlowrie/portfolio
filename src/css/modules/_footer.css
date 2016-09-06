@@ -1,0 +1,43 @@
+/* @import modules/_footer.css */
+
+.footer {
+	color: $color-tx-main;
+	background-color: color($color-bg-main shade(10%));
+	padding: 0 0 2em 0;
+	line-height: 100%;
+	text-align: center;
+	padding-bottom: 3rem;
+	
+	h3 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+	
+	a {
+	    color: $color-lk-main;
+	    
+	}
+	a:hover, a:active {
+		color: color($color-lk-main blackness(60%));
+	}
+	
+	.nav {
+		margin-top: 0;
+	}
+	
+	li {
+	    list-style: none;
+	    display: inline;
+	    /* font-size: 100%; */
+	}
+
+	p{
+	    margin-top:1rem;
+	}
+	
+	#footer-bottom {
+	    .fa-heart {
+	        color: $pastel-red;
+	    }
+	}
+}

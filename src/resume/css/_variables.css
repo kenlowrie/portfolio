@@ -1,0 +1,60 @@
+/* @import "_variables.css" */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700';
+
+/* seaside hues */
+$sh-silver: #E2E2DF;
+$sh-lighttan: #F7F8EE;
+$sh-lightblue: #D6E8F0;
+$sh-gray: #A8A9B4;
+$sh-darkgray: #696D74;
+$sh-teal: #008080;
+
+/* $color1: #545E6C;
+$color2: #42A8C0;
+$color3: #2d7788;
+$color4: #fff;
+$color5: #97AAC3; 
+$color6: #3F4650;
+$color7: #ff866a;
+$color8: #f5f5f5;
+$color9: #7bc2d3;
+$color10: #1a454f;
+*/
+
+$color1: #545E6C;
+$color2: #42A8C0;   /* aqua */
+$color3: #2d7788;   /* teal */
+$color4: #fff;      /* white */
+$color5: #97AAC3;   /* light gray */
+$color6: #3F4650;   /* dark gray */
+$color7: #ff866a;   /* pastel red */
+$color8: #f5f5f5;   /* off white */
+$color9: #7bc2d3;   /* */
+$color10: #1a454f;  /* dark gray */
+
+$color2: $sh-teal;
+$color3: color($sh-teal shade(55%));
+$color5: color($sh-teal tint(28%));
+$color6: color($sh-darkgray lightness(25%));
+$color8: $sh-silver;
+$color9: color($sh-teal tint(30%));
+$color10: color($sh-lightblue lightness(80%));
+$color11: $sh-teal;
+
+
+$main_color: $color1;
+$main_bg: $color8;
+$sidebar_bg: $color2;
+$sidebar_text: $color4;
+$sidebar_link: $color4;
+$link_text: $color3;
+$link_hover: $color10;
+$section_title: $color11;
+$main_wrapper_bg: $color4;
+$exp_text2: $color5;
+$exp_text1: $color6;
+$heart_color: $color7;
+$level_bar: $color8;
+$level_bar_inner: $color9;
+

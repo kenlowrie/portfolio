@@ -1,0 +1,76 @@
+/* @import modules/_header.css */
+
+.header {
+	
+	.tagline {
+		display: none;
+		
+		@media $small {
+			display: block;
+			max-width: 40em;
+			line-height: 140%;
+			font-size: 2.5rem;
+		}
+		
+		h1 {
+			display: none;
+		}
+		
+		p {
+		    margin: 60px 20px;
+		}
+		
+		em {
+			font-size: 140%;
+    		vertical-align: -6%;
+			color: $black;
+			font-style: normal;
+		}
+	}
+}
+
+#mainheader {
+	@mixin bgImage '../img/header.jpg', 500px, transparent, transparent;
+	
+	@media $small {
+		@mixin bgImage '../img/header.jpg', 800px, transparent, transparent;
+	}
+
+	color: $color-tagline;
+}
+
+#vpheader {
+	@mixin bgImage '../img/section-vp.jpg', 300px, transparent, transparent;
+	
+	@media $small {
+		@mixin bgImage '../img/section-vp.jpg', 400px, transparent, transparent;
+	}
+
+	color: $color-tagline-vp;
+	
+	.tagline {
+	    position: relative;
+        top: 200px;
+        left: 16px;	    
+	}
+}
+
+#wsheader {
+	@mixin bgImage '../img/section-ws.jpg', 300px, transparent, transparent;
+	
+	@media $small {
+		@mixin bgImage '../img/section-ws.jpg', 400px, transparent, transparent;
+	}
+
+	color: $color-tagline-ws;
+}
+
+#sdheader {
+	@mixin bgImage '../img/section-sd.jpg', 300px, transparent, transparent;
+	
+	@media $small {
+		@mixin bgImage '../img/section-sd.jpg', 400px, transparent, transparent;
+	}
+
+	color: $color-tagline-sd;
+}

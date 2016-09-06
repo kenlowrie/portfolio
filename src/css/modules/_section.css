@@ -1,0 +1,30 @@
+/* @import modules/_section.css */
+
+.section {
+    min-height: 40vh;
+    line-height: 160%;
+	/*	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+    @media $small {
+        font-size: 2rem;
+    }
+    */
+
+	.headline {
+		text-transform: uppercase;
+		font-weight: $font-weight-normal;
+		font-size: 3rem;
+		margin-top: 3rem;
+		line-height: 110%;
+		padding-bottom: 1rem;
+	}
+
+	em, a {
+		font-size: 140%;
+		vertical-align: -6%;
+	}
+
+}
