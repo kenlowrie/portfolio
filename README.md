@@ -1,5 +1,5 @@
 # portfolio
-This is my online portfolio website that is published on <a href="https://klowrie.net/cs" target="_blank">klowrie.net</a>.
+This is my online portfolio website that is published on [klowrie.net](https://klowrie.net/cs).
 
 I put this together to make it easier for prospective clients to learn about my background and experience. A little easier to just shoot a link to this site instead of writing out a long email or other summary. It's a work in progress, and probably always will be. 
 
