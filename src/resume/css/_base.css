@@ -245,8 +245,8 @@ p {
         }
         .upper-row {
             position: relative;
-            overflow: hidden;
-            margin-bottom: 2px;
+            /*overflow: hidden;
+            margin-bottom: 2px;*/
         }
         .job-title {
             color: $exp_text1;
