@@ -66,11 +66,28 @@
 }
 
 #sdheader {
-	@mixin bgImage '../img/section-sd.jpg', 300px, transparent, transparent;
-	
-	@media $small {
-		@mixin bgImage '../img/section-sd.jpg', 400px, transparent, transparent;
+	.hdr-container {
+	    /* padding:0; */
+	    margin:0 auto;
+        .tagline {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            background-color: $color-tagline-bg;
+            position: relative;
+            top: -8rem;
+            p {
+                margin: 0;
+                padding-right: 2em;
+                text-align: right;
+            } 
+        }
 	}
-
-	color: $color-tagline-sd;
+	img {
+	    padding: 0;
+	    padding-top: 51px;
+	    margin: 0;
+	}
+	color: $color-tagline-sd;	
 }

@@ -2,7 +2,8 @@
 
 #vpsection, #sdsection, #wssection{
     .panel-body {
-        height: 200px;
+        /* height: 300px; */
+        min-height: 40vh;
     }
 
 	h1 {
@@ -12,7 +13,11 @@
 
 	em, a {
 		font-size: 120%;
+		font-weight: 600;
 		vertical-align: -4%;
+	}
+	em{
+	    padding-right: 5px;
 	}
 	
 	li {
@@ -35,7 +40,7 @@
 
         em, a {
             font-size: 160%;
-            vertical-align: -4%;
+            vertical-align: -8%;
         }
     }
 }
