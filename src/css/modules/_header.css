@@ -11,6 +11,12 @@
 			line-height: 140%;
 			font-size: 2.5rem;
 		}
+		@media $large {
+		    /* until I can figure out how to prevent CSS from adding the box sizing
+		        of the tagline to the .hdr-container, I'm just going to turn it off
+		        at 1200px. Otherwise, the absolute positioning is sticking it to the left */
+		    display: none;
+		}
 		
 		h1 {
 			display: none;
@@ -29,46 +35,10 @@
 	}
 }
 
-#mainheader {
-	@mixin bgImage '../img/header.jpg', 500px, transparent, transparent;
-	
-	@media $small {
-		@mixin bgImage '../img/header.jpg', 800px, transparent, transparent;
-	}
-
-	color: $color-tagline;
-}
-
-#vpheader {
-	@mixin bgImage '../img/section-vp.jpg', 300px, transparent, transparent;
-	
-	@media $small {
-		@mixin bgImage '../img/section-vp.jpg', 400px, transparent, transparent;
-	}
-
-	color: $color-tagline-vp;
-	
-	.tagline {
-	    position: relative;
-        top: 200px;
-        left: 16px;	    
-	}
-}
-
-#wsheader {
-	@mixin bgImage '../img/section-ws.jpg', 300px, transparent, transparent;
-	
-	@media $small {
-		@mixin bgImage '../img/section-ws.jpg', 400px, transparent, transparent;
-	}
-
-	color: $color-tagline-ws;
-}
-
-#sdheader {
+#mainheader, #vpheader, #sdheader, #wsheader {
 	.hdr-container {
-	    /* padding:0; */
 	    margin:0 auto;
+	    position: relative;
         .tagline {
             margin: 0 auto;
             padding-top: 1rem;
@@ -76,8 +46,8 @@
             width: 100%;
             max-width: 1200px;
             background-color: $color-tagline-bg;
-            position: relative;
-            top: -8rem;
+            position: absolute; /* relative makes this nicer, but then it adds the box-sizing of .tagline to .hdr-container. ugh */
+            bottom: 2rem;
             p {
                 margin: 0 auto;
                 padding-right: 2em;
@@ -91,4 +61,16 @@
 	    margin: 0 auto;
 	}
 	color: $color-tagline-sd;	
+}
+
+#mainheader {
+}
+
+#vpheader {
+}
+
+#wsheader {
+}
+
+#sdheader {
 }
