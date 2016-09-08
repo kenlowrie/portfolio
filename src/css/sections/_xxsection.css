@@ -1,10 +1,6 @@
 /* @import modules/_xxsection.css */
 
 #vpsection, #sdsection, #wssection{
-    .panel-body {
-        /* height: 300px; */
-        min-height: 40vh;
-    }
 
 	h1 {
 		margin-top: 2rem;
@@ -27,6 +23,17 @@
 
     p {
         padding: 5px 10px;
+    }
+    
+    .panel-body {
+        /* height: 300px; */
+        min-height: 40vh;
+        .pb-thumb {
+            margin: 1rem auto;
+            padding:0 0 1rem 0;
+            text-align: center;
+            background-color: $color-pb-thumb;
+        }
     }
 
 	@media $small {
