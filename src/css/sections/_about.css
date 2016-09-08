@@ -9,6 +9,10 @@
 		vertical-align: -4%;
 	}
 	
+	em {
+	    color: $color-em-about;
+	}
+	
 	a {
 		font-style: italic;
 	    color: $color-lk-about; 

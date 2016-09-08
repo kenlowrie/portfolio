@@ -15,6 +15,7 @@ $sh-gray: #A8A9B4;
 $sh-darkgray: #696D74;
 $sh-teal: #A0ADAC;
 
+$pastel-yellow: #fff373;
 $pastel-red: #ff866a;
 
 $color-main: color($sh-darkgray shade(50%));
@@ -27,6 +28,7 @@ $color-background: $sh-silver;
 $color-bg-main: color($sh-darkgray lightness(20%));
 $color-tx-main: color($sh-lighttan blackness(10%));
 $color-lk-main: color($sh-lightblue tint(5%));
+$color-em-main: color($pastel-yellow lightness(42%));
 $color-bg-portfolio: color($color-background shade(10%));
 $color-bg-portfolio-card: $sh-lighttan;
 $color-bg-portfolio-card-title: color(black lightness(5%));
@@ -35,9 +37,11 @@ $color-lk-portfolio: color($sh-lighttan tint(5%));
 $color-bg-about: color($sh-teal shade(5%));
 $color-tx-about: color($sh-lighttan lightness(10%));
 $color-lk-about: color($sh-lighttan tint(5%));
+$color-em-about: $pastel-yellow;
 $color-bg-footer: color($sh-darkgray lightness(20%));
 $color-tx-footer: color($sh-lighttan blackness(10%));
 $color-lk-footer: color($sh-lightblue tint(5%));
+$color-pb-thumb: $color-bg-main;
 
 /* TODO: Figure out exactly what I want these widths to bet set to */
 

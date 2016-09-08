@@ -9,6 +9,10 @@
 		vertical-align: -4%;
 	}
 	
+	em {
+	    color: $color-em-main;
+	}
+	
 	li {
 	    list-style: none;
 	    font-size: 100%;
@@ -16,6 +20,12 @@
 
     p {
         padding: 0;
+    }
+    
+    h4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $color-tx-main;
     }
 
 	@media $small {
