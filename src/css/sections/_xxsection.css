@@ -16,6 +16,15 @@
 	    padding-right: 5px;
 	}
 	
+	.italics {
+		font-style: italic;
+		text-decoration: underline;
+		font-size: 110%;
+		font-weight: 600;
+		vertical-align: -4%;
+	    padding-right: 5px;
+	}
+	
 	li {
 	    list-style: none;
 	    font-size: 100%;
