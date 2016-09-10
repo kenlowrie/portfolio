@@ -13,3 +13,19 @@
 		height: 60vh;
 		max-height: $height;
 	}
+
+@define-mixin bigTextShadow $shadowCol: rgba(0,0,0,.7)
+{
+  text-shadow: 2px 2px 3px $shadowCol;  
+}
+
+@define-mixin smallTextShadow $shadowCol: rgba(48,48,48,.7)
+{
+  text-shadow: 1px 1px 2px $shadowCol;
+}
+
+@define-mixin tinyTextShadow $shadowCol: rgba(48,48,48,.7)
+{
+  text-shadow: 1px 1px 1px $shadowCol;
+}
+
