@@ -1,6 +1,6 @@
 /* @import modules/_xxsection.css */
 
-#vpsection, #sdsection, #wssection{
+#vpsection, #sdsection, #wssection, #pxsection{
 
 	h1 {
 		margin-top: 2rem;
@@ -24,17 +24,6 @@
     p {
         padding: 5px 10px;
     }
-    
-    .panel-body {
-        /* height: 300px; */
-        min-height: 40vh;
-        .pb-thumb {
-            margin: 1rem auto;
-            padding:0 0 1rem 0;
-            text-align: center;
-            background-color: $color-pb-thumb;
-        }
-    }
 
 	@media $small {
         p {
@@ -50,5 +39,90 @@
             vertical-align: -8%;
         }
     }
+
+	.project-cards {
+		@media $small {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		
+		.project-card {
+			background-color: $color-bg-portfolio-card;
+			box-shadow: 5px 5px 3px color($color-bg-portfolio-shadow alpha(50%));
+			border-radius: 20px;
+			margin-bottom: 3rem;
+			
+			@media $small {
+                transition: all .2s ease-in;
+                transform: scale(.9);
+                opacity: .8;
+            
+                &:hover {
+                    margin:0;
+                    transform: scale(1.05);
+                    opacity: 1;
+                }
+            }
+			
+            .pc-thumb {
+                margin: 0 auto;
+                padding: 0 0 1rem 0;
+                text-align: center;
+                background-color: $color-pb-thumb;
+        
+				a{
+				    color: $color-lk-pcard;
+				    
+				    &:hover, &:active {
+				        color: $color-ah-pcard;
+				    }
+				}
+
+                span {
+                    display: block;
+                    margin-top: 1rem;
+                }
+            }
+    
+			.pcard-info {
+				background-color: $color-bg-pcard-info;
+				padding: 3% 7%;
+    			border-radius: 20px 20px 0 0;
+			
+				.pcard-name {
+					font-size: 2rem;
+					line-height: 160%;
+					color: $color-tx-pcard-name;
+					font-weight: $font-weight-bold;
+					@mixin bigTextShadow;
+				}
+			
+				.pcard-title {
+					color: $color-tx-pcard-title;
+					font-size: 1.4rem;
+					line-height: 100%;
+					@mixin bigTextShadow;
+				}
+			}
+			
+			.pcard-text {
+				font-size: 1.8rem;
+				font-weight: $font-weight-normal;
+				line-height: 160%;
+				margin: 0;
+				padding: 7%;
+
+				a{
+				    color: $color-lk-pcard;
+				    
+				    &:hover, &:active {
+				        color: $color-ah-pcard;
+				    }
+				}
+			}
+
+		}/*.project-card*/
+	}/*.project-cards*/
 }
 

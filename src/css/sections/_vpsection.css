@@ -1,1 +1,23 @@
 /* @import modules/_vpsection.css */
+
+#vpsection {
+	.project-cards {
+		.project-card {
+			@media $small {
+				width: calc($item-width/2 - 1.5rem);
+			}
+
+			@media $large {
+				width: calc($item-width/3 - 1.5rem);
+			}
+		}/*.project-card*/
+	}/*.project-cards*/
+}
+
+#pxsection {
+    .page-header {
+        h1 {
+            padding-left: 1rem;
+        }
+    }
+}

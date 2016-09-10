@@ -1,1 +1,15 @@
 /* @import modules/_wssection.css */
+
+#wssection {
+	.project-cards {
+		.project-card {
+			@media $small {
+				width: calc($item-width/2 - 1.5rem);
+			}
+
+			@media $large {
+				width: calc($item-width/4 - 1.5rem);
+			}
+		}/*.project-card*/
+	}/*.project-cards*/
+}
