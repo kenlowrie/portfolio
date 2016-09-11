@@ -18,7 +18,9 @@ $sh-realteal: #008080;
 $sh-notrealteal: #ff7f7f;
 
 $pastel-yellow: #fff373;
+$pastel-yellow-alt: #fff69f;
 $pastel-red: #ff866a;
+$dark-orange: #ef662f;
 
 $color-main: color($sh-darkgray shade(50%));
 $color-tagline: $color-main;
