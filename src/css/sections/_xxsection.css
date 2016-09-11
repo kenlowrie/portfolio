@@ -1,10 +1,74 @@
 /* @import modules/_xxsection.css */
 
-#vpsection, #sdsection, #wssection, #pxsection{
+#intro, #vpintro, #sdintro, #wsintro {
+
+    padding-top: 1rem;
+
+    color: $color-tx-main;
+    background-color: $color-bg-main;
+
+	.container {
+        background-color: $color-bg-main;
+	}
+
+	em, a {
+		font-size: 120%;
+		vertical-align: -4%;
+	}
+	
+	em {
+	    color: $color-em-main;
+	}
+	
+	li {
+	    list-style: none;
+	    font-size: 100%;
+	}
+
+    p {
+        padding: 0;
+    }
+    
+    h1 {
+        @mixin smallTextShadow $sh-lighttan;
+    }
+
+    h4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $color-tx-main;
+    }
+
+	@media $small {
+        p {
+            padding: 10px 20px;
+        }
+
+        li {
+            font-size: 80%;
+        }
+
+        em, a {
+            font-size: 160%;
+            vertical-align: -4%;
+        }
+    }
+
+    a{
+        color: $color-lk-pcard;
+        
+        &:hover, &:active {
+            color: $color-ah-pcard;
+        }
+    }
+}
+
+#portfolio, #vpsection, #sdsection, #wssection, #pxsection{
 
 	h1 {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
+		@mixin smallTextShadow;
 	}
 
 	em, a {
@@ -18,11 +82,12 @@
 	
 	.italics {
 		font-style: italic;
-		text-decoration: underline;
-		font-size: 110%;
+		font-size: 120%;
 		font-weight: 600;
 		vertical-align: -4%;
 	    padding-right: 5px;
+	    color: $dark-orange;
+	    @mixin smallTextShadow;
 	}
 	
 	li {
@@ -133,5 +198,53 @@
 
 		}/*.project-card*/
 	}/*.project-cards*/
+}
+
+#pxsection, #about {
+    color: $color-tx-about;
+    background-color: $color-bg-about;
+    
+    h1 {
+        @mixin smallTextShadow $sh-lighttan;
+    }
+
+	em, a {
+		font-size: 120%;
+		vertical-align: -4%;
+	}
+	
+	em {
+	    color: $color-em-about;
+	}
+	
+	a {
+		font-style: italic;
+	    color: $color-lk-about; 
+	}
+	
+	li {
+	    list-style: none;
+	    font-size: 100%;
+	}
+
+    p {
+        padding: 0;
+    }
+
+	@media $small {
+        p {
+            padding: 10px 20px;
+        }
+
+        li {
+            font-size: 80%;
+        }
+
+        em, a {
+            font-size: 130%;
+            vertical-align: -6%;
+        }
+    }
+    padding-bottom: 3rem;
 }
 
