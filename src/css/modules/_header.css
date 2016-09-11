@@ -18,6 +18,9 @@
 		    display: none;
 		}
 		
+		.headline { /* this isn't being used, but putting it here as a placeholder for now */
+		}
+		
 		h1 {
 			display: none;
 		}
