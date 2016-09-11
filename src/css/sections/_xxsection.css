@@ -10,7 +10,11 @@
 	.container {
         background-color: $color-bg-main;
 	}
-
+    .signature {
+		font-family: $font-signature;
+		font-size: 4rem;
+	}
+	
 	em, a {
 		font-size: 120%;
 		vertical-align: -4%;
