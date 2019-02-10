@@ -1,14 +1,16 @@
-var gulp = require('gulp'),
-	gutil = require('gulp-util'),
-	gulpif = require('gulp-if'),
-	postcss = require('gulp-postcss'),
-	precss = require('precss'),
-	cssnano = require('cssnano'),
-	autoprefixer = require('autoprefixer'),
-	webserver = require('gulp-webserver2'),
-	cached = require('gulp-cached'),
-	include = require('gulp-html-tag-include'),
-	minifyHTML = require('gulp-minify-html');
+//gulpfile for klportfolio
+
+const gulp = require('gulp'),
+      gulpif = require('gulp-if'),
+      gutillog = require('fancy-log'),
+	  postcss = require('gulp-postcss'),
+	  precss = require('precss'),
+	  cssnano = require('cssnano'),
+	  autoprefixer = require('autoprefixer'),
+	  webserver = require('gulp-webserver2'),
+	  cached = require('gulp-cached'),
+	  include = require('gulp-html-tag-include'),
+	  minifyHTML = require('gulp-minify-html');
 
 var env,
 	srcDir,
@@ -35,55 +37,62 @@ if (env === 'dev'){
 console.log('Building klportfolio in ' + env + ' mode to ' + outDir);
 
 gulp.task('cpimg', function(){
-   gulp.src([srcDir + '**/img/*',srcDir + '**/img/photos/*'],{base: srcDir}) 
-    .pipe(cached("imgcache"))
-  	.pipe(gulp.dest(outDir));
+   return gulp.src([srcDir + '**/img/*',srcDir + '**/img/photos/*'],{base: srcDir}) 
+       .pipe(cached("imgcache"))
+       .pipe(gulp.dest(outDir))
 });
 
+//console.log('Registering task jscache');
 gulp.task('js', function(){
-   gulp.src(jsSources,{base: srcDir})
-    .pipe(cached("jscache"))
-  	.pipe(gulp.dest(outDir));
+   return gulp.src(jsSources,{base: srcDir})
+       .pipe(cached("jscache"))
+       .pipe(gulp.dest(outDir));
 });
 
+//console.log('Registering task cpgulpsrc');
 gulp.task('cpgulpsrc', function(){
-   gulp.src(gulpSources)
-    .pipe(cached("gulpcache"))
-  	.pipe(gulp.dest(outDir));
+   return gulp.src(gulpSources)
+       .pipe(cached("gulpcache"))
+       .pipe(gulp.dest(outDir))
 });
 
+//console.log('Registering task html');
 gulp.task( 'html', function() {
-	gulp.src(htmlSources)
+	return gulp.src(htmlSources)
 	    .pipe(include())
-		.on('error', gutil.log)
+		.on('error', gutillog)
 	    .pipe(cached('htmlcache'))
 		.pipe(gulpif(env === 'rel', minifyHTML()))
-		.pipe(gulp.dest(outDir))
+        .pipe(gulp.dest(outDir))
 });
 
+//console.log('Setting up postcssTasks ...');
 var postcssTasks = [precss(),autoprefixer()];
 if (env === 'rel'){
 	postcssTasks = [precss(),autoprefixer(),cssnano()];
 }
 
+//console.log('Registering task css');
 gulp.task( 'css', function() {
-	gulp.src(cssSources)
+	return gulp.src(cssSources)
 		.pipe(postcss(postcssTasks))
-		.on('error', gutil.log)
+		.on('error', gutillog)
 		.pipe(cached("csscache"))
-		.pipe(gulp.dest(outDir))
+        .pipe(gulp.dest(outDir))
 });
 
-gulp.task('watch', function() {
-  gulp.watch(srcDir + '**/*.css', ['css']);
-  gulp.watch(srcDir + 'resume/js/*.js', ['js']);
-  gulp.watch(srcDir + '**/*.html', ['html']);
-  gulp.watch(srcDir + 'tmpl/*', ['html']);
-  gulp.watch(srcDir + '**/img/*', ['cpimg']);
-  gulp.watch(srcDir + '**/img/photos/*', ['cpimg']);
+//console.log('Registering task watch');
+gulp.task('watch', function(done) {
+  gulp.watch(srcDir + '**/*.css', gulp.series(['css']));
+  gulp.watch(srcDir + 'resume/js/*.js', gulp.series(['js']));
+  gulp.watch(srcDir + '**/*.html', gulp.series(['html']));
+  gulp.watch(srcDir + 'tmpl/*', gulp.series(['html']));
+  gulp.watch(srcDir + '**/img/*', gulp.series(['cpimg']));
+  gulp.watch(srcDir + '**/img/photos/*', gulp.series(['cpimg']));
+  done();
 });
 
-
+//console.log('Registering task webserver');
 gulp.task('webserver', function() {
   gulp.src(outDir)
     .pipe(webserver({
@@ -94,6 +103,10 @@ gulp.task('webserver', function() {
 
 var buildtasks=['html', 'css', 'js', 'cpimg','cpgulpsrc'];
 
-gulp.task('build', buildtasks); 
+//console.log('Registering task build');
+gulp.task('build', gulp.series(buildtasks)); 
 
-gulp.task('default', buildtasks.concat(['webserver', 'watch']));
+//console.log('Registering task default');
+gulp.task('default', gulp.parallel(buildtasks.concat(['webserver', 'watch'])));
+
+//console.log('End of file');
