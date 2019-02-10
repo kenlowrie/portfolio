@@ -13,7 +13,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href=@@resume>Resume</a></li>
+            <!-- instead of the "LinkedIn URL", you can use @@resume to point to the resume/index.html file -->
+            <li><a href="https://www.linkedin.com/in/kenlowrie" target="_blank">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!-- #navbar navbar-collapse collapse -->
