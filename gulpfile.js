@@ -10,6 +10,7 @@ const gulp = require('gulp'),
 	  webserver = require('gulp-webserver2'),
 	  cached = require('gulp-cached'),
 	  include = require('gulp-html-tag-include'),
+	  fs = require('fs'),
 	  minifyHTML = require('gulp-minify-html');
 
 var env,
@@ -28,10 +29,18 @@ jsSources = [srcDir + 'resume/js/*.js'];
 cssSources = [srcDir + '**/styles.css'];
 gulpSources = [srcDir + 'gulpfiles/*.js'];
 
+if (!fs.existsSync(bldRoot)){
+	fs.mkdirSync(bldRoot);
+}
+
 if (env === 'dev'){
 	outDir = bldRoot + 'dev/';
 } else {
 	outDir = bldRoot + 'rel/';
+}
+
+if (!fs.existsSync(outDir)){
+	fs.mkdirSync(outDir);
 }
 
 console.log('Building klportfolio in ' + env + ' mode to ' + outDir);
