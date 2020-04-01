@@ -46,7 +46,7 @@ if (!fs.existsSync(outDir)){
 console.log('Building klportfolio in ' + env + ' mode to ' + outDir);
 
 gulp.task('cpimg', function(){
-   return gulp.src([srcDir + '**/img/*',srcDir + '**/img/photos/*'],{base: srcDir}) 
+   return gulp.src([srcDir + '**/img/*',srcDir + '**/img/photos/*',srcDir + '**/img/gfx/*'],{base: srcDir}) 
        .pipe(cached("imgcache"))
        .pipe(gulp.dest(outDir))
 });
@@ -98,6 +98,7 @@ gulp.task('watch', function(done) {
   gulp.watch(srcDir + 'tmpl/*', gulp.series(['html']));
   gulp.watch(srcDir + '**/img/*', gulp.series(['cpimg']));
   gulp.watch(srcDir + '**/img/photos/*', gulp.series(['cpimg']));
+  gulp.watch(srcDir + '**/img/gfx/*', gulp.series(['cpimg']));
   done();
 });
 
